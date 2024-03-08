@@ -1,4 +1,3 @@
-
 /* general styling */
 html {
     font-family: "Montserrat", sans-serif;
@@ -6,43 +5,52 @@ html {
     font-style: normal;
     font-size: 12px;
 }
+
 /* set the var */
 :root {
     --coloraccent: #FA4A0C;
     --colorsub: #737373;
     --colormain: #252B42;
     --coloroff: #FFFFFF;
-    --colortpr: rgba(0,0,0,0);
+    --colortpr: rgba(0, 0, 0, 0);
 }
+
 /* style all the texts */
 h1 {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     font-weight: 700;
-    font-size: 58px;
-    line-height: 80px;
+    font-size: 36px;
+    line-height: 42.5px;
     text-align: center;
-    color: var(--coloroff);
+    color: var(--colormain);
+    margin: 36px;
 }
 
 h2 {
     font-weight: 700;
     font-size: 40px;
     line-height: 57px;
+    text-align: center;
     color: var(--colormain);
+    margin: 40px;
 }
 
 h3 {
     line-height: 36px;
     font-weight: 700;
     font-size: 24px;
+    text-align: center;
     color: var(--coloraccent);
+    margin: 24px;
 }
 
 h4 {
     line-height: 38px;
     font-weight: 500;
     font-size: 24px;
+    text-align: center;
     color: var(--colorsub);
+    margin: 24px;
 }
 
 p {
@@ -50,6 +58,7 @@ p {
     color: var(--colorsub);
     font-weight: 700;
     line-height: 18px;
+    margin: 1em;
 }
 
 *,
@@ -73,12 +82,10 @@ img {
 }
 
 /* link, visited, hover/focus, active , no underline, font size*/
-
 a,
 a:link,
 a:visited {
     color: inherit;
-
 }
 
 a {
@@ -90,8 +97,8 @@ a {
 }
 
 /* dress button */
-
-.banner a {
+.banner a,
+.download a {
     color: var(--coloraccent);
     font-weight: 700;
     font-size: 24px;
@@ -100,9 +107,177 @@ a {
     border: 1px solid var(--coloraccent);
     border-radius: 30px;
     padding: 16px 32px 16px 32px;
+    align-self: center;
+    margin: 12px;
 }
 
+/* button hover */
+.banner a:hover,
+.banner a:focus,
+.download a:hover,
+.download a:focus {
+    color: var(--coloroff);
+    background-color: var(--coloraccent);
+}
+
+/* button at download section */
+.download div {
+    display: flex;
+    justify-content: center;
+    margin: 36px;
+}
+
+.download a {
+    border-radius: 10px;
+    border-color: var(--coloroff);
+    color: var(--coloroff);
+}
+
+.fdeskstop {
+    display: none;
+}
+
+/* banner's buttons flows */
+.banner div {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* banner background color */
+.banner {
+    background-color: #fafafa;
+    padding: 80px 0 300px 0;
+}
+
+.banner h3 {
+    color: var(--colorsub);
+}
+
+/* navigation bar */
+/* main logo */
 .logo {
     width: 104px;
+    margin: 43px;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0.3em 5em;
+}
+
+nav ul li:focus,
+nav ul li:hover {
+    color: var(--coloraccent);
+}
+
+/* hamburger menu */
+/* change into vertifcal menu */
+.menu li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid var(--colorsub);
+}
+
+nav label {
+    display: inline-block;
+    color: var(--colorsub);
+    font-size: 36px;
+}
+
+.menu {
+    display:none;
+}
+
+nav input:checked ~ .menu {
+    display:block;
+}
+
+
+
+
+
+
+/* download section */
+.download {
+    background-color: var(--colormain);
+    color: var(--coloroff);
+    padding: 80px 0 80px 0;
+}
+
+.download h2 {
+    color: var(--coloroff);
+    padding: 0 32px 0 32px;
+}
+
+.download h4 {
+    padding: 0 32px 0 32px;
+}
+
+/* footer logo */
+footer .logo {
+    display: none;
+}
+
+/* give footer the space */
+footer div {
+    margin: 48px;
+}
+
+/* footer icon */
+
+.icon {
+    text-align: center;
+}
+
+.fa-brands {
+    color: var(--coloraccent);
+    font-size: 36px;
+    margin: 16px;
+}
+
+.icon li {
+    display: inline-block;
+}
+
+.fa-instagram {
+    display: none;
+}
+
+/* footer credit */
+
+.copy {
+    display: none;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* deskstop style */
+@media screen and (min-width:760px) {
+
+    /* hide the hamburger */
+    nav label,
+    #mark {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul:last-child() {
+        display: flex;
+    }
+   
+
+}
