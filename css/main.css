@@ -167,39 +167,43 @@ nav {
     align-items: center;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0.3em 5em;
+.menu li {
+    /* change into vertifcal menu */
+    display: block;
+    text-align: center;
+    margin: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
-nav ul li:focus,
-nav ul li:hover {
+.menu li:focus,
+.menu li:hover {
     color: var(--coloraccent);
 }
 
 /* hamburger menu */
-/* change into vertifcal menu */
-.menu li {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 1px solid var(--colorsub);
-}
 
 nav label {
     display: inline-block;
     color: var(--colorsub);
     font-size: 36px;
+    cursor: pointer;
 }
 
 .menu {
     display:none;
 }
 
-nav input:checked ~ .menu {
-    display:block;
+
+nav input:checked ~ .fa-bars {
+    display: none;
 }
 
+/* hiding the checkbox input */
+#mark {
+    display: none;
+}
 
 
 
@@ -275,8 +279,12 @@ footer p {
         width: 100%;
     }
 
-    nav ul:last-child() {
+    .menu {
         display: flex;
+    }
+
+    .menu li {
+        display: inline-block;
     }
    
 
