@@ -34,15 +34,31 @@
                 <!-- the logo section -->
                 <ul>
                     <li>
-                        <a href="#Home"><img src="images/Bella-Olonje-logo.png" alt="Bella Olonje's logo" class="logo">
+                        <a href="#Home"><img 
+                            srcset="images/logo/Logo.png 51w,
+                        images/logo/Logo@2x.png 101w,
+                        images/logo/Logo@3x.png 151w,
+                        images/logo/Logo@4x.png 201w"
+                        sizes="(min-width: 992px) 201px,
+                                (min-width: 768px) 151px,
+                                (min-width: 600px) 101px,
+                                (max-width: 599px) 51px"
+                            src="images/Bella-Olonje-logo.png" alt="Bus Detector App" class="logo">
                         </a>
                     </li>
                 </ul>
 
+                <!-- the checkbox for hamburger menu -->
+                <input type="checkbox" id="mark">
+                <label for="mark">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-x"></i>
+                </label>
+
                 <!-- the collapsable menu -->
                 <ul class="menu">
                     <li>
-                        <a href="#Home">Home</a>
+                        <a href="./index.html">Home</a>
                     </li>
 
                     <li>
@@ -57,13 +73,6 @@
                         <a href="#Contact">Contact</a>
                     </li>
                 </ul>
-
-                 <!-- the checkbox for hamburger menu -->
-                 <label for="mark">
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-x"></i>
-                </label>
-                <input type="checkbox" id="mark">
             </nav>
 
             <!-- banner -->
@@ -78,8 +87,17 @@
             </div>
 
             <!-- introduction of phone app -->
-            <div>
-                <img src="/images/phone-1.png" alt="app demo on phone">
+            <div class="introimage">
+                <div>
+                    <img 
+                        srcset="images/Phone_Images/Phones-544p.png 544w,
+                        images/Phone_Images/Phones-1088p.png 1088w,
+                        images/Phone_Images/Phones-3x.png 1632w"
+                        sizes="(min-width: 992px) 1632px,
+                                (min-width: 601px) 1088px,
+                                (max-width: 600px) 544px"
+                    src="./images/Phones.png" alt="introduction">
+                </div>
             </div>
 
         </header>
@@ -88,30 +106,100 @@
 
             <!-- how the app works -->
             <div class="divider">
-                <p>How the app works</p>
+                <h3>How the app works</h3>
             </div>
 
-            <div>
-                <h3>Create An Account</h3>
-                <h2>Create/login to an existing account to get started</h2>
-                <h4>Account is created with your email and a desired password</h4>
-                <img src="images/phone-2.png" alt="account login interface">
-            </div>
+            <div class="container-app-info">
 
-            <div>
-                <h3>Explore Varieties</h3>
-                <h2>Shop for your favorites meal as e dey hot</h2>
-                <h4>Shop for your favorite meals or drinks and enjoy while doing it</h4>
-                <img src="images/phone-3.png" alt="exploring the foods">
+                <!-- create an account section -->
+                <div class="re-order">
+                    <div class="app-info">
+                        <h3>Create An Account</h3>
+                        <h2>Create/login to an existing account to get started</h2>
+                        <h4>Account is created with your email and a desired password</h4>
+                    </div>
+                    <div class="des-img">
+                        <picture> 
+                        <source
+                            srcset="images/Phone_Images/Welcome-510p.png,
+                            images/Phone_Images/Welcome-1020p.png 2x,
+                            images/Phone_Images/Welcome-1530p.png 3x"
+                            media="(min-width:992px)">
+                            <source
+                            srcset="images/Phone_Images/Welcome-340p.png,
+                            images/Phone_Images/Welcome-680p.png 2x,
+                            images/Phone_Images/Welcome-1020p.png 3x"
+                            media="(min-width:768px)">
+                            <source
+                            srcset="images/Phone_Images/Welcome-170p.png,
+                            images/Phone_Images/Welcome-340p.png 2x,
+                            images/Phone_Images/Welcome-510p.png 3x"
+                            media="(max-width:767px)">
+                            <img src="./images/Phone_1_NE.png" alt="account login interface">
+                        </picture>
+                    </div>
+                </div>
+                
+                <!-- explore varieties section -->
+                <div class="re-order">
+                    <div class="app-info">
+                        <h3>Explore Varieties</h3>
+                        <h2>Shop for your favorites meal as e dey hot</h2>
+                        <h4>Shop for your favorite meals or drinks and enjoy while doing it</h4>
+                    </div>
+                    <div class="img-explore">
+                        <picture>
+                            <source
+                            srcset="images/Phone_Images/Info-510p.png,
+                            images/Phone_Images/Info-1020p.png 2x,
+                            images/Phone_Images/Info-1530p.png 3x"
+                            media="(min-width:992px)">
+                            <source
+                            srcset="images/Phone_Images/Info-340p.png,
+                            images/Phone_Images/Info-680p.png 2x,
+                            images/Phone_Images/Info-1020p.png 3x"
+                            media="(min-width:768px)">
+                            <source
+                            srcset="images/Phone_Images/Info-170p.png,
+                            images/Phone_Images/Info-340p.png 2x,
+                            images/Phone_Images/Info-510p.png 3x"
+                            media="(max-width:767px)">
+                            <img src="./images/Phone_2_NE.png" alt="exploring the information">
+                        </picture>
+                    </div>
+                </div>
+                
+                <!-- check out section -->
+                <div class="re-order">
+                    <div class="app-info">
+                        <h3>Checkout</h3>
+                        <h2>When you done check out and get it delivered.</h2>
+                        <h4>When you done check out and get it deliered with ease</h4>
+                    </div>
+                    <div class="des-img">
+                        <picture>
+                            <source
+                            srcset="images/Phone_Images/Ck-Out-510p.png,
+                            images/Phone_Images/Ck-Out-1020p.png 2x,
+                            images/Phone_Images/Ck-Out-1530p.png 3x"
+                            media="(min-width:992px)">
+                            <source
+                            srcset="images/Phone_Images/Ck-Out-340p.png,
+                            images/Phone_Images/Ck-Out-680p.png 2x,
+                            images/Phone_Images/Ck-Out-1020p.png 3x"
+                            media="(min-width:768px)">
+                            <source
+                            srcset="images/Phone_Images/Ck-Out-170p.png,
+                            images/Phone_Images/Ck-Out-340p.png 2x,
+                            images/Phone_Images/Ck-Out-510p.png 3x"
+                            media="(max-width:767px)">
+                        <img src="./images/Phone_3_NE.png" alt="check out">
+                        </picture>
+                    </div>
+                </div>
             </div>
-
-            <div>
-                <h3>Checkout</h3>
-                <h2>When you done check out and get it delivered.</h2>
-                <h4>When you done check out and get it deliered with ease</h4>
-                <img src="images/phone-4.png" alt="payment">
-            </div>
-
+                
+            <!-- download section -->
             <div class="download">
                 <h2>Download the app now</h2>
                 <h4 class="fdeskstop">Available on your favorite store. Start your premium experience now</h4>
@@ -136,7 +224,7 @@
                     <li><i class="fa-brands fa-linkedin"></i></li>
                 </ul>
                 <p class="copy">&copy; Copyright Bella Onojie, 2020</p>
-                <p>Just type what's on your mind and we'll</p>
+                <p class="mine">This website is coded by &copy; Patrick Minh-Ngoc Le</p>
             </div>
         </footer>
 
