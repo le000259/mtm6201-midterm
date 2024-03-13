@@ -27,6 +27,12 @@
 <body>
 
     <div class="container">
+
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to main nav</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+        </ul>
+
         <header>
 
             <!-- navigation bar -->
@@ -34,8 +40,7 @@
                 <!-- the logo section -->
                 <ul>
                     <li>
-                        <a href="#Home"><img src="images/logo/Logo.svg" alt="Bus Detector App"
-                                class="logo">
+                        <a href="#Home"><img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
                         </a>
                     </li>
                 </ul>
@@ -45,28 +50,31 @@
                     <div>
                         <input type="checkbox" id="mark">
                         <label for="mark">
+                            <div class="menu-button"></div>
                             <i class="fa-solid fa-bars"></i>
                             <i class="fa-solid fa-x"></i>
                         </label>
                     </div>
                     <!-- the collapsable menu -->
-                    <ul class="menu">
-                        <li>
-                            <a href="./index.html">Home</a>
-                        </li>
-                        
-                        <li>
-                            <a href="#Product">Product</a>
-                        </li>
-                        
-                        <li>
-                            <a href="#Fag">Fag</a>
-                        </li>
-                        
-                        <li>
-                            <a href="#Contact">Contact</a>
-                        </li>
-                    </ul>
+                    <div class="menu-container">
+                        <ul class="menu">
+                            <li>
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#Product">Product</a>
+                            </li>
+
+                            <li>
+                                <a href="#Fag">Fag</a>
+                            </li>
+
+                            <li>
+                                <a href="#Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
 
@@ -88,7 +96,8 @@
                         images/Phone_Images/Phones-1088p.png 1088w,
                         images/Phone_Images/Phones-3x.png 1632w" sizes="(min-width: 992px) 1632px,
                                 (min-width: 601px) 1088px,
-                                (max-width: 600px) 544px" src=".images/Phone_Images/Phones-1088p.png" alt="introduction">
+                                (max-width: 600px) 544px" src=".images/Phone_Images/Phones-1088p.png"
+                        alt="introduction">
                 </div>
             </div>
 
@@ -188,8 +197,7 @@
 
         <footer>
             <div class="footer-container">
-                <img src="images/logo/Logo.svg" alt="Bus Detector App"
-                    class="logo">
+                <img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
                 <ul class="icon">
                     <li><i class="fa-brands fa-twitter"></i></li>
                     <li><i class="fa-brands fa-square-facebook"></i></li>
