@@ -3,13 +3,13 @@ html {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* set the var */
 :root {
     --coloraccent: #5831B9;
-    --colorsub: #737373;
+    --colorsub: #4A4A4A;
     --colormain: #252B42;
     --coloroff: #FFFFFF;
     --colortpr: rgba(0, 0, 0, 0);
@@ -25,7 +25,7 @@ h1 {
     font-size: var(--lv1-mobile);
     line-height: 1.5em;
     text-align: center;
-    color: var(--colormain);
+    color: var(--coloraccent);
     margin: 36px;
 }
 
@@ -67,7 +67,7 @@ p {
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+    box-sizing: border-box;
     line-height: inherit;
 }
 
@@ -78,9 +78,9 @@ p {
 }
 
 /* image scale with the size of its container */
-img {
-    width: 100%;
-    height: auto;
+img,
+picture {
+    max-width: 100%;
     display: block;
 }
 
@@ -149,19 +149,22 @@ a {
 
 /* banner background color */
 .banner {
-    background-color: #fafafa;
+    background-color: #ebe6e6;
     padding: 80px 0 80px 0;
 }
 
-.banner h3 {
-    color: var(--colorsub);
+.banner h3,
+.banner h4 {
+    color: var(--colormain);
 }
 
 /* navigation bar */
 /* main logo */
 .logo {
-    width: 104px;
-    margin: 43px;
+    width: 80px;
+    border: 0.5px solid var(--coloraccent);
+    border-radius: 30px;
+    margin: 1em;
 }
 
 nav {
@@ -190,10 +193,11 @@ nav label {
     color: var(--colorsub);
     font-size: var(--lv2);
     cursor: pointer;
+    margin: 0.5em;
 }
 
 /* hiding the checkbox input */
-#mark {
+input {
     display: none;
 }
 
@@ -203,21 +207,27 @@ nav label {
 }
 
 /* when input is checked, the menu icon hides, close icon appears, menu appears */
-#mark:checked~.fa-bars {
+#mark:checked .fa-bars {
     display: none;
 }
 
-#mark:checked~.fa-x {
+#mark:checked .fa-x {
     display: block;
 }
 
-#mark:checked~.menu {
-    right: 0;
+#mark:checked .menu {
+    display: block;
+    width: 100%;
 }
 
-
+/* intro image section */
 .introimage {
     margin-top: -100px;
+}
+
+.introimage div {
+    width: 80%;
+    margin-inline: auto;
 }
 
 /* divider section */
@@ -231,19 +241,24 @@ nav label {
 
 
 /* all the info sections */
-
 /* set the width of the container */
 .container-app-info {
     width: 80%;
     margin-inline: auto;
 }
 
-
 /* image size */
 .des-img,
 .img-explore {
     width: 50%;
     margin-inline: auto;
+}
+
+/* set the photo center */
+picture {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 2em 0;
 }
 
 /* download section */
@@ -260,6 +275,7 @@ nav label {
 
 .download h4 {
     padding: 0 32px 0 32px;
+    color: var(--coloroff);
 }
 
 /* footer logo */
@@ -267,13 +283,7 @@ footer .logo {
     display: none;
 }
 
-/* give footer the space */
-footer div {
-    margin: 48px;
-}
-
 /* footer icon */
-
 .icon {
     text-align: center;
 }
@@ -293,6 +303,10 @@ footer div {
 }
 
 /* footer credit */
+.footer-container div {
+    margin-bottom: 1em;
+}
+
 .copy {
     display: none;
 }
@@ -302,29 +316,33 @@ footer p {
 }
 
 /******** set the condition for the hamburger menu only for mobile *******/
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 599px) {
 
     /* display the menu vertically but hide it on the side */
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        z-index: 100;
-        background-color: var(--colormain);
-        color: var(--coloroff);
-        font-weight: bolder;
-        transition: all 0.2s ease-in-out;
-    }
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--colormain);
+    color: var(--coloroff);
+    font-weight: bolder;
+    transition: all 0.2s ease-in-out;
+}
 
 }
 
-/********** deskstop style **********/
-@media screen and (min-width: 577px) {
+*/
+
+/************************************/
+/********** tablet style ************/
+/************************************/
+@media screen and (min-width: 600px) {
 
     /* hide the hamburger */
     nav label,
@@ -345,33 +363,29 @@ footer p {
         position: relative;
     }
 
-
-
     /* banner section */
     /* background image at banner section */
     .banner {
-        background-image: url(/images/banner.png);
+        background-image: url(/images/banner.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-x: center;
-    }
-
-    .banner div {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    /* change font style for h1 */
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: var(--lv1-desktop);
+        background-position: center;
     }
 
     /* change color of the text */
     .banner h3,
-    .banner h1,
     .banner h4 {
         color: var(--coloroff);
+    }
+
+    h1 {
+        color: #E3DBF5;
+    }
+
+    /* change the direction of buttons order */
+    .banner div {
+        flex-direction: row;
+        justify-content: center;
     }
 
     /* change color of the button */
@@ -380,9 +394,11 @@ footer p {
         border-color: var(--coloroff);
     }
 
-    /* change color button when hover */
+    /* change color button's border when hover */
     .banner a:hover,
-    .banner a:focus {
+    .banner a:focus,
+    .fdeskstop:hover,
+    .fdeskstop:focus {
         border-color: var(--coloraccent);
     }
 
@@ -408,27 +424,53 @@ footer p {
 
     .re-order {
         display: flex;
+        gap: 10%;
+        /* width: 540px; */
     }
 
     .app-info {
-        padding-top: 2em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .des-img {
         order: -1;
+    }
 
+    .des-img,
+    .img-explore {
+        margin-inline: auto;
+    }
+
+    picture {
+        width: 300px;
+        max-width: 100%;
     }
 
     .re-order h3,
     .re-order h2,
     .re-order h4 {
         text-align: left;
-        margin-left: 0;
+        margin: 0.5em 0 0.5em 0;
     }
 
     /* download section background image */
     .download {
-        background-image: url(/images/end-pic.png);
+        background-image: url(/images/banner-map.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* change the button name */
+    .fdeskstop {
+        display: block;
+    }
+
+    .fmobile {
+        display: none;
     }
 
     /*********** footer change ******/
@@ -439,4 +481,42 @@ footer p {
     .copy {
         display: block;
     }
+}
+
+/************************************/
+/********** deskstop style **********/
+/************************************/
+@media screen and (min-width: 768px) {
+
+    /* change global font size */
+    html {
+        font-size: 14px;
+    }
+
+    /* change font style for h1 */
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: var(--lv1-desktop);
+    }
+
+    picture {
+        max-width: 100%;
+    }
+
+    /* .re-order {
+            width: 730px;
+        } */
+
+    /* footer change */
+    .mine,
+    footer .logo {
+        display: block;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
