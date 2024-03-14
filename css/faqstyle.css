@@ -1,0 +1,45 @@
+/* put in the background color */
+.container-faq {
+    background-color: var(--colorbg);
+}
+/* keep the dominant color */
+h1 {
+    color: var(--coloraccent);
+}
+
+article {
+    text-align: center; 
+}
+
+/* put the link with underline */
+article a {
+    text-decoration: underline;
+}
+
+/************************************/
+/*** tablet style ***/
+/************************************/
+@media screen and (min-width: 600px) {
+    .mine {
+        display: block;
+    }
+}
+
+/************************************/
+/*** desktop style ***/
+/************************************/
+@media screen and (min-width: 768px) {
+    /* re-order the faq design */
+    .container-app-info {
+        display: flex;
+        justify-content: space-around;
+       align-items: center;
+        gap: 15%;
+    }
+   
+    .container-app-info img {
+        width: 60%;
+        height: auto;
+    }
+
+}

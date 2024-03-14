@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Detector App's Contact Page</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- icon link styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contactstyle.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <ul role="list" class="skip-links">
+            <li><a href="#menu-container">Skip to main nav</a></li>
+            <li><a href="#divider">Skip to main content</a></li>
+        </ul>
+
+        <header>
+
+            <!-- navigation bar -->
+            <nav role="navigation">
+                <!-- the logo section -->
+                <ul>
+                    <li>
+                        <a href="/index.html"><img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
+                        </a>
+                    </li>
+                </ul>
+
+                <div>
+                    <!-- the checkbox for hamburger menu -->
+                    <div>
+                        <input type="checkbox" id="mark">
+                        <label for="mark">
+                            <div class="menu-button"></div>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-x"></i>
+                        </label>
+                    </div>
+                    <!-- the collapsable menu -->
+                    <div class="menu-container" id="menu-container">
+                        <ul role="list" class="menu">
+                            <li>
+                                <a href="./index.html">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#Product">Product</a>
+                            </li>
+
+                            <li>
+                                <a href="./faq.html">Faq</a>
+                            </li>
+
+                            <li>
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <main role="main">
+
+            <!-- this is the h1 text -->
+            <div role="contentinfo" class="intro">
+                <h1 role="heading">We'd Love to Hear From You</h1>
+                <h4 role="heading">Whether you're curious about features, a free trial, or even press, we're ready to
+                    answer any and all questions.</h4>
+            </div>
+
+            <!-- this is the form for contact -->
+            <div class="container-app-info container-form">
+                <form role="form">
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name"><i class="fa-solid fa-user"></i> Your name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="number" required>
+                        <label for="number"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="10" required></textarea>
+                        <label for="mesage"><i class="fa-solid fa-comment"></i> Your Message</label>
+                    </div>
+                    <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i> </button>
+                </form>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
+                <ul class="icon">
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+                <div>
+                    <p class="mine">This page is coded by &copy; Patrick Minh-Ngoc Le</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

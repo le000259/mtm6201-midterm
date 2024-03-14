@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Detector App</title>
+    <title>Bus Detector App's Home Page</title>
 
     <!-- reset css -->
     <link rel="stylesheet" href="css/reset.css">
@@ -28,19 +28,19 @@
 
     <div class="container">
 
-        <ul class="skip-links">
-            <li><a href="#nav">Skip to main nav</a></li>
-            <li><a href="#main">Skip to main content</a></li>
+        <ul role="list" class="skip-links">
+            <li><a href="#menu-container">Skip to main nav</a></li>
+            <li><a href="#divider">Skip to main content</a></li>
         </ul>
 
         <header>
 
             <!-- navigation bar -->
-            <nav>
+            <nav role="navigation">
                 <!-- the logo section -->
                 <ul>
                     <li>
-                        <a href="#Home"><img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
+                        <a href="/index.html"><img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
                         </a>
                     </li>
                 </ul>
@@ -56,8 +56,8 @@
                         </label>
                     </div>
                     <!-- the collapsable menu -->
-                    <div class="menu-container">
-                        <ul class="menu">
+                    <div class="menu-container" id="menu-container">
+                        <ul role="list" class="menu">
                             <li>
                                 <a href="./index.html">Home</a>
                             </li>
@@ -67,11 +67,11 @@
                             </li>
 
                             <li>
-                                <a href="#Fag">Fag</a>
+                                <a href="./faq.html">Faq</a>
                             </li>
 
                             <li>
-                                <a href="#Contact">Contact</a>
+                                <a href="./contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -79,9 +79,9 @@
             </nav>
 
             <!-- banner -->
-            <div class="banner">
-                <h3>Bus Detector App</h3>
-                <h1>Why wait when you have Bus Detector App</h1>
+            <div role="banner" class="banner">
+                <h3 role="heading">Bus Detector App</h3>
+                <h1 role="heading">Why wait when you have Bus Detector App</h1>
                 <h4>Download the Bus Detector App now on</h4>
                 <div>
                     <a href="" class="playstore">Play Store</a>
@@ -102,18 +102,18 @@
             </div>
 
         </header>
-        <main>
+        <main role="main">
             <!-- how the app works -->
-            <div class="divider">
-                <h3>How the app works</h3>
+            <div class="divider" id="divider">
+                <h3 role="heading">How the app works</h3>
             </div>
 
             <div class="container-app-info">
 
                 <!-- create an account section -->
-                <div class="re-order">
-                    <div class="app-info">
-                        <h3>Create An Account</h3>
+                <div role="article" class="re-order">
+                    <div role="contentinfo" class="app-info">
+                        <h3 role="heading">Create An Account</h3>
                         <h2>Create an account to get started</h2>
                         <h4>Account is created with your email and a desired password</h4>
                     </div>
@@ -134,9 +134,9 @@
                 </div>
 
                 <!-- explore varieties section -->
-                <div class="re-order">
-                    <div class="app-info">
-                        <h3>Explore Varieties</h3>
+                <div role="article" class="re-order">
+                    <div role="contentinfo" class="app-info">
+                        <h3 role="heading">Explore Varieties</h3>
                         <h2>Choose your favorable route</h2>
                         <h4>Explore different route options to travel with easy steps</h4>
                     </div>
@@ -157,9 +157,9 @@
                 </div>
 
                 <!-- check out section -->
-                <div class="re-order">
-                    <div class="app-info">
-                        <h3>Checkout</h3>
+                <div role="article" class="re-order">
+                    <div role="contentinfo" class="app-info">
+                        <h3 role="heading">Checkout</h3>
                         <h2>Get a ticket with the perfect route</h2>
                         <h4>Check out when you finish and get it delivered with ease</h4>
                     </div>
@@ -181,15 +181,15 @@
             </div>
 
             <!-- download section -->
-            <div class="download">
-                <h2>Download the app now</h2>
+            <div role="article" class="download">
+                <h2 role="heading">Download the app now</h2>
                 <h4 class="fdeskstop">Available on your favorite store. Start your premium experience now</h4>
                 <h4 class="fmobile">Most calendars are designed for teams.</h4>
                 <div>
-                    <a href="" class="fdeskstop">Play Store</a>
-                    <a href="" class="fdeskstop">App Store</a>
-                    <a href="" class="fmobile">Buy Now</a>
-                    <a href="" class="fmobile">Try For Free</a>
+                    <a href="https://play.google.com/" aria-label="Go to Playstore to download" class="fdeskstop">Play Store</a>
+                    <a href="https://www.apple.com/ca/app-store/" aria-label="Go to Appstore to download" class="fdeskstop">App Store</a>
+                    <a href="https://play.google.com/" aria-label="Go to Playstore to download" class="fmobile">Buy Now</a>
+                    <a href="https://www.apple.com/ca/app-store/" aria-label="Go to Appstore to download" class="fmobile">Try For Free</a>
                 </div>
             </div>
 
@@ -199,13 +199,13 @@
             <div class="footer-container">
                 <img src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
                 <ul class="icon">
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-square-facebook"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
                 <div>
-                    <p class="copy"> &copy; <a href="http://www.freepik.com">Designed by <u>Freepik</u></a></p>
+                    <p class="copy"> &copy; <a href="http://www.freepik.com" aria-label="Go to the designer's page">Designed by <u>Freepik</u></a></p>
                     <p class="mine">This website is coded by &copy; Patrick Minh-Ngoc Le</p>
                 </div>
             </div>
