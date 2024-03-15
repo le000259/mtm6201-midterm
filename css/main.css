@@ -221,6 +221,7 @@ nav {
 .menu li:focus,
 .menu li:hover {
     color: var(--coloraccent);
+    transform: scale(1.5);
 }
 
 /* hamburger menu */
@@ -446,7 +447,7 @@ footer p {
     /* banner section */
     /* background image at banner section */
     .banner {
-        background-image: url(./images/banner.jpg);
+        background-image: url(../images/banner.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -538,7 +539,7 @@ footer p {
 
     /* download section background image */
     .download {
-        background-image: url(./images/banner-map.png);
+        background-image: url(../images/banner-map.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
