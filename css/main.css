@@ -80,7 +80,7 @@ p {
 /* image scale with the size of its container */
 img,
 picture {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -200,65 +200,51 @@ a {
     width: 80px;
     border: 0.5px solid var(--coloraccent);
     border-radius: 30px;
-    margin: 1em;
+    /* margin: 1em; */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em;
 }
 
+/* hamburger menu */
 .menu li {
     display: block;
+    position: relative;
     text-align: center;
-    margin: 32px;
+    margin: 2em;
     width: 100%;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
 }
 
+.menu li:last-of-type {
+    margin-right: 1em;
+}
+
 .menu li:focus,
 .menu li:hover {
     color: var(--coloraccent);
-    transform: scale(1.5);
+    transform: scaleY(1.5);
 }
 
-/* hamburger menu */
-nav label {
-    display: inline-block;
-    color: var(--colorsub);
+.fa-solid {
+    position: absolute;
+    color: var(--coloraccent);
     font-size: var(--lv2);
     cursor: pointer;
-    margin: 0.5em;
-}
-
-.menu-container {
     display: none;
+    right: 0.5em;
+    top: 2em;
+    transform: translateY(-50%);
 }
 
 /* hiding the checkbox input */
 #mark {
     display: none;
-}
-
-/* hide the close icon */
-.fa-x {
-    display: none;
-}
-
-/* when input is checked, the menu icon hides, close icon appears, menu appears */
-#mark:checked .fa-bars {
-    display: none;
-}
-
-#mark:checked .fa-x {
-    display: block;
-}
-
-#mark:checked .menu-container {
-    display: block;
-    width: 100%;
 }
 
 /* intro image section */
@@ -349,6 +335,10 @@ picture {
 }
 
 /* footer logo */
+.footer-container {
+    padding: 1em;
+}
+
 footer .logo {
     display: none;
 }
@@ -363,10 +353,6 @@ footer .logo {
     font-size: var(--lv3);
     margin: 16px;
     margin-bottom: 0;
-}
-
-.fa-solid {
-    color: var(--coloraccent);
 }
 
 .icon li {
@@ -392,13 +378,14 @@ footer p {
 
 /******** set the condition for the hamburger menu only for mobile *******/
 
-/* @media screen and (max-width: 599px) { */
+@media screen and (max-width: 599px) {
 
-/* display the menu vertically but hide it on the side */
-/* .menu {
+    /* display the menu vertically but hide it on the side */
+    .menu {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 80%;
         height: 100vh;
         position: fixed;
@@ -407,13 +394,27 @@ footer p {
         z-index: 100;
         background-color: var(--colormain);
         color: var(--coloroff);
-        font-weight: bolder;
+        /* font-weight: bolder; */
         transition: all 0.2s ease-in-out;
     }
 
-} */
+    .menu li {
+        margin-top: 40px;
+    }
 
+    .menu a {
+        padding: 10px;
+    }
 
+    .fa-solid {
+        display: block;
+    }
+
+    #mark:checked~.menu {
+        right: 0;
+    }
+
+}
 
 
 /************************************/
