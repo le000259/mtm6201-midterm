@@ -41,41 +41,37 @@
                 <!-- the logo section -->
                 <ul itemscope itemtype="https://schema.org/Organization">
                     <li>
-                        <a itemprop="url" href="/index.html"><img itemprop="logo" src="images/logo/Logo.svg" alt="Bus Detector App" class="logo">
+                        <a itemprop="url" href="/index.html"><img itemprop="logo" src="images/logo/Logo.svg"
+                                alt="Bus Detector App" class="logo">
                         </a>
                     </li>
                 </ul>
-
-                <div>
-                    <!-- the checkbox for hamburger menu -->
-                    <div>
+                <!-- the collapsable menu -->
+                <div class="menu-container" id="menu-container">
+                    <ul>
+                        <!-- the checkbox for hamburger menu -->
                         <input type="checkbox" id="mark">
-                        <label for="mark">
-                            <div class="menu-button"></div>
-                            <i class="fa-solid fa-bars"></i>
-                            <i class="fa-solid fa-x"></i>
-                        </label>
-                    </div>
-                    <!-- the collapsable menu -->
-                    <div class="menu-container" id="menu-container">
-                        <ul role="list" class="menu">
+                        <span class="menu">
                             <li>
                                 <a href="./index.html">Home</a>
                             </li>
-
                             <li>
                                 <a href="#Product">Product</a>
                             </li>
-
                             <li>
                                 <a href="./faq.html">Faq</a>
                             </li>
-
                             <li>
                                 <a href="./contact.html">Contact</a>
                             </li>
-                        </ul>
-                    </div>
+                            <label for="mark">
+                                <i class="fa-solid fa-x"></i>
+                            </label>
+                        </span>
+                        <label for="mark">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+                    </ul>
                 </div>
             </nav>
 
